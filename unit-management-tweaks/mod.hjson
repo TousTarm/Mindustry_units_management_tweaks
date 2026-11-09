@@ -1,0 +1,8 @@
+name: unit-management-tweaks
+displayName: Unit Management Tweaks
+author: Tomáš Rindt
+version: "1.1"
+minGameVersion: "147"
+description: "HOI4-style control group bar with group numbers over units (add, remove, disband), and same speed: units commanded together move at the pace of the slowest one. Client-side only."
+# client-side only: adds no content, so servers and other players don't need it
+hidden: true
