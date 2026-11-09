@@ -36,25 +36,18 @@ Client-side only (`hidden: true`): adds no content, other players don't need it.
 
 Requires Mindustry v8 (build 147 or newer).
 
-**Option A: import as zip**
+**Option A: import from GitHub**
 
-1. Zip the *contents* of the `unit-management-tweaks` folder so `mod.hjson` sits at the zip root:
+In game: **Mods → Import Mod → Import From GitHub**, enter `TousTarm/Mindustry_units_management_tweaks`, restart.
+
+**Option B: import as zip**
+
+1. Zip `mod.hjson` and `scripts/` so `mod.hjson` sits at the zip root:
    ```sh
-   cd unit-management-tweaks && python3 -c "import zipfile; z = zipfile.ZipFile('../unit-management-tweaks.zip', 'w'); [z.write(f) for f in ('mod.hjson', 'scripts/main.js')]"
+   python3 -c "import zipfile; z = zipfile.ZipFile('unit-management-tweaks.zip', 'w'); [z.write(f) for f in ('mod.hjson', 'scripts/', 'scripts/main.js')]"
    ```
 2. In game: **Mods → Import Mod → Import File** and choose the zip.
 3. Restart the game.
-
-**Option B: copy the folder**
-
-Copy the `unit-management-tweaks` folder into your Mindustry mods directory and restart:
-
-| OS      | Mods directory                                     |
-|---------|----------------------------------------------------|
-| Windows | `%AppData%\Mindustry\mods\`                        |
-| Linux   | `~/.local/share/Mindustry/mods/`                   |
-| macOS   | `~/Library/Application Support/Mindustry/mods/`    |
-| Steam   | `<Steam>/steamapps/common/Mindustry/saves/mods/`   |
 
 ## How it works
 
